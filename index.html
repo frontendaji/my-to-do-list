@@ -19,20 +19,30 @@
                     <p>0 active Todo</p>
                 </div>
                 <div class="progress-tasks">
-                    <p>Incompleted Task</p>
-                    <p>Completed Task</p>
+                    <p onclick="incompletedTasks()">Incompleted Task</p>
+                    <p onclick="completedTasks()">Completed Task</p>
                 </div>
             </header>
-            <main>
-                <div class="add-tasks">
-                    <input type="text" placeholder="Enter a task ..." id="input-tasks" required>
-                    <button onclick="addTasks()">Add Task</button>
-                </div>
-                <div class="list-tasks">
-                    <ul id="tasks">
-
-                    </ul>
-                </div>
+            <main >
+                <section id="incompleted-tasks" class="incompleted-tasks">
+                    <div class="add-tasks">
+                        <input type="text" placeholder="Enter a task ..." id="input-tasks" required>
+                        <button onclick="addTasks()">Add Task</button>
+                    </div>
+                    <div class="list-tasks">
+                        <ul id="tasks">
+    
+                        </ul>
+                    </div>
+                </section>
+                <section id="completed-tasks" class="completed-tasks">
+                    <div class="list-tasks">
+                        <h1>Tasks Completed</h1>
+                        <ul id="Completed" class="completed">
+                            
+                        </ul>
+                    </div>
+                </section>
             </main>
         </div>
     </div>

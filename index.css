@@ -45,7 +45,17 @@ header .progress-tasks{
 }
 
 header .progress-tasks p{
+    color: #F6F6F7;
+
+}
+
+header .progress-tasks p:nth-of-type(2){
+    color: #6F747A;
+}
+
+header .progress-tasks p{
     font-size: 1em;
+    cursor: pointer;
 }
 
 main .add-tasks{
@@ -73,6 +83,17 @@ main .add-tasks button{
     border-radius: 3px;
 }
 
+main .list-tasks{
+    width: 100%;
+}
+
+main .list-tasks h1{
+    font-size: 1.5em;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #6F747A;
+}
+
 main .list-tasks ul{
     display: flex;
     flex-direction: column;
@@ -92,9 +113,16 @@ main .list-tasks ul li{
 main .list-tasks ul img{
     width: 1rem;
     filter: invert(1);
+    cursor: pointer;
 }
 
 main .list-tasks ul li img:nth-last-of-type(1){
     position: absolute;
     right: 1rem;
 }
+
+main .completed-tasks{
+    display: none;
+    margin-top: 4rem;
+}
+
