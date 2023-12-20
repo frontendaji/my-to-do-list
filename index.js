@@ -1,3 +1,4 @@
+const no = document.getElementById('no');
 const tasks = document.getElementById('input-tasks');
 let completedTasksArray = [];
 let arrayTasks = [];
@@ -5,6 +6,12 @@ const maxTasks = 5;
 const completed = document.getElementById('completed-tasks');
 const inclompleted = document.getElementById('incompleted-tasks');
 
+
+function numberActiveTodo(){
+    noActive = arrayTasks.length;
+
+    no.textContent = noActive; 
+}
 function completedTasks(){
     const completedParagraph = document.querySelector('p[onclick="completedTasks()"]');
     const incompletedParagraph = document.querySelector('p[onclick="incompletedTasks()"]');
@@ -49,6 +56,7 @@ function addTasks() {
     console.table(arrayTasks);
 
     tasks.value = "";
+    numberActiveTodo();
     showTask()
 }
 
@@ -72,6 +80,7 @@ function showTask(){
                 completedTasksArray.push(item);
                 arrayTasks.shift(item);
                 showTask();
+                numberActiveTodo();
             }
             console.log(completedTasksArray);
             console.log(arrayTasks);
@@ -90,6 +99,7 @@ function showTask(){
             arrayTasks.shift(item);
             alert('The task was successfully deleted');
             showTask();
+            numberActiveTodo();
         };
 
         uiElement.appendChild(liElement);

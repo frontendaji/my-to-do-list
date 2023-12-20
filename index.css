@@ -39,6 +39,10 @@ header .date p{
     color: #61DBFB;
 }
 
+header .date p span{
+    color: #61DBFB;
+}
+
 header .progress-tasks{
     display: flex;
     gap: 2rem;
