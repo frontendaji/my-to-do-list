@@ -2,6 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: #F6F6F7;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container{
@@ -11,58 +13,88 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #161A30;
+    background-color: #61DBFB;
 }
 
-.todo{
-    border: 1px solid #F0ECE5;
-    width: 30rem;
-    height: 40rem;
+.tasks{
+    width: 60rem;
+    height: 35rem;
+    background-color: #393F49;
+    padding: 3rem;
+    border-radius: 5px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+header .date h1{
+    font-size: 1.2em;
+}
+
+header .date p{
+    font-size: 0.8em;
+    color: #61DBFB;
+}
+
+header .progress-tasks{
+    display: flex;
+    gap: 2rem;
+}
+
+header .progress-tasks p{
+    font-size: 1em;
+}
+
+main .add-tasks{
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #6F747A;
+}
+
+main .add-tasks input{
+    width: 20rem;
+    height: 2rem;
+    border-radius: 3px;
+    border: none;
+    padding-left: 1rem;
+    color: #393F49;
+}
+
+main .add-tasks button{
+    width: 5.5rem;
+    height: 2rem;
+    background-color: #61DBFB;
+    border: none;
+    border-radius: 3px;
+}
+
+main .list-tasks ul{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    gap: 1rem;
+    list-style: none;
+}
+
+main .list-tasks ul li{
+    border-bottom: 1px solid #6F747A;
+    padding-bottom: 0.5rem;
+    position: relative;
+    display: flex;
     align-items: center;
-    border-radius: 20px;
-    background-color: #31304D;
+    gap: 2rem;
 }
 
-.todo h1{
-    color: #F0ECE5;
-}
-.list{
-    height: 20rem;
-    width: 20rem;
-    border: 1px solid #F0ECE5;
-    border-radius: 10px;
-}
-.list{
-   display: flex;
-   flex-direction: column;
-   justify-content: start;
-   padding-top: 5rem;
-   align-items: center;
+main .list-tasks ul img{
+    width: 1rem;
+    filter: invert(1);
 }
 
-.list p{
-    text-align: left;
-    color: #F0ECE5;
-    width: 10rem;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #F0ECE5;
-}
-
-input{
-    background-color: #31304D;
-    padding: 5px;
-    margin-right: 1rem;
-    border-radius: 5px;
-    border: 1px solid #F0ECE5;
-}
-
-.btn-add{
-    padding: 5px 1.5rem;
-    border: 1px solid #F0ECE5;
-    background-color: #161A30;
-    color: #F0ECE5;
-    border-radius: 5px;
+main .list-tasks ul li img:nth-last-of-type(1){
+    position: absolute;
+    right: 1rem;
 }

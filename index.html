@@ -3,21 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript</title>
+    <title>Todo List</title>
     <script src="index.js" defer></script>
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <div class="todo">
-            <h1>Todo List</h1>
-            <div class="list" id="list">
+        <div class="tasks">
+            <header>
+                <div class="date">
+                    <h1>Wednesday, September 20</h1>
+                    <p>0 active Todo</p>
+                </div>
+                <div class="progress-tasks">
+                    <p>Incompleted Task</p>
+                    <p>Completed Task</p>
+                </div>
+            </header>
+            <main>
+                <div class="add-tasks">
+                    <input type="text" placeholder="Enter a task ..." id="input-tasks" required>
+                    <button onclick="addTasks()">Add Task</button>
+                </div>
+                <div class="list-tasks">
+                    <ul id="tasks">
 
-            </div>
-            <div class="add-todo">
-                <input type="text" name="todo" id="inputTodo">
-                <button onclick="addTodo()" class="btn-add">Add todo</button>
-            </div>
+                    </ul>
+                </div>
+            </main>
         </div>
     </div>
 </body>
